@@ -26,9 +26,6 @@ class TestViews(TestCase):
         self.assertEqual(response.status_code, 204)
 
     def test_products_json_id_create(self):0
-        response = self.client.post("/api/v1/products", data=dict(id= 4, name= "vindicator"))
+        response = self.client.post("/api/v1/products", json={name= "vindicator"})
         self.assertEqual(response.status_code, 201)
-        """
-        response = self.client.post("/api/v1/products/")
-        self.assertEqual(response.status_code, 204)
-        """
+
