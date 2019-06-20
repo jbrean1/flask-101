@@ -1,7 +1,7 @@
 # wsgi.py
 from flask import Flask, jsonify, request, abort
 
-app = Flask(__name__)
+app = Flask(__name__) 
 
 PRODUCTS = [
     { 'id': 1, 'name': 'Skello' },
